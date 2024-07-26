@@ -156,6 +156,7 @@
     margin-top: 30px;
     display: flex;
     gap: 1.5rem;
+    width: 100%;
 }
 .cv{
     background-color: #f3ad1a;
@@ -165,6 +166,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    /* width: 100%; */
 }
 .Hire{
     padding: 12px;
@@ -173,6 +175,7 @@
     border: 1px solid  #f3ad1a;
     border-radius: 5px;
     cursor: pointer;
+    /* width: 100%; */
 }
 .Hire:hover{
     letter-spacing: 1px;
@@ -481,6 +484,7 @@
     font-size: 15px;
     border-radius: 5px;
     padding: 10px 60px;
+    width:100% ;
 }
 .github{
     padding: 10px 50px;
@@ -489,6 +493,7 @@
     border: 1px solid  #f3ad1a;
     border-radius: 5px;
     font-size: 15px;
+    width:100% ;
 }
 .btn:hover{
     letter-spacing: 1px;
@@ -545,8 +550,8 @@ footer{
         padding: 4% 70px;
         flex-direction: column-reverse;
     }
-    .socialmedia-icon{
-       display: none;
+    .icons{
+       display: block;
     }
     .bio-info{
         width:100% ;
@@ -586,10 +591,28 @@ footer{
     .navbar{
         display: none;
     }
-.logo{
+.navbar.logo{
     display: block;
     display: flex;
 }
+.icons{
+    display: inline-block;
+    transition: .2s;
+    width:100% ;
+ }
+ .socialmedia-icon p{
+    display: none;
+ }
+ .hire-btn{
+    width: 100%;
+    gap:1rem ;
+ }
+ .Hire{
+    width: 100%;
+ }
+ /* .cv{
+    width: 100%;
+ } */
 } 
 
 @media (max-width:768px){
@@ -604,6 +627,7 @@ footer{
     margin-top: 20px;
     display: inline-block;
     padding: 10px 60px;
+    width:100% ;
 }
 .git{
     width: 100%;
@@ -677,6 +701,7 @@ footer{
         margin-top: 20px;
         display: inline-block;
         padding: 10px 60px;
+        width:100% ;
     }
     .github{
         padding: 10px 40px;
