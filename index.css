@@ -19,6 +19,8 @@
 .logo{
     padding-right:10px;
     font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
     }
 .navbar{
     display: flex; 
@@ -52,6 +54,7 @@
     border-radius: 70px;
     margin-bottom: 20px;
     background-color: transparent;
+    display: none;
 }
 .sidebar{
     position: fixed;
@@ -432,8 +435,8 @@
 }
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 50px;
 } 
 .project{
     background-color: #3b3b3b;
@@ -511,6 +514,8 @@ footer{
     margin-top: 20px;
     width: 100%; 
 }
+
+
 /* media quey, caling for all devices */
 @media (max-width:1850px){
     #navbar-container{
@@ -538,8 +543,63 @@ footer{
     .socialmedia-icon{
         left: 4%;
         transition: .2s;
-        /* width: 90%; */
     }
+}
+
+@media (max-width:1280px){
+    #Projects-section{
+      padding: 70px; 
+    }  
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 60px; 
+    } 
+    .github{
+       padding: 10px 50px;
+        font-size: 15px;
+        display: inline-block;
+    } 
+ 
+}
+
+@media (min-width:1024px){
+    #Projects-section{
+      padding: 70px;
+    }  
+    .btn{
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 60px;
+    }
+    .github{
+         padding: 10px 40px; 
+        font-size: 15px;
+        display: inline-block;
+    } 
+    .Need-me h1{
+        text-align: center;
+        width:100% ;
+    } 
+    .Need-me button{
+        align-items: center;
+        justify-content: center;
+    }
+    .Need-me{
+        text-align: center;
+        width: 100%;
+    }
+  }
+
+@media (max-width:1020px){
+    .navbar a{
+       margin: 0 12px;
+       transition: .2s;
+       /* font-size: ; */
+    }
+    #navbar-container{
+       padding:  10px 70px;
+   }
 }
 @media (max-width:950px){
     #navbar-container{
@@ -563,38 +623,118 @@ footer{
         margin: auto;
         height: auto;
     }
-}
-@media (max-width:1020px){
-     .navbar a{
-        margin: 0 12px;
-        transition: .2s;
-        /* font-size: ; */
-     }
-     #navbar-container{
-        padding:  10px 70px;
+    #About-section{
+        flex-direction: column;
+    }
+    .About-me{
+        width:100% ;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .pic{
+        width:100% ;
+        margin: auto;
+        height: auto;
+        flex-direction: column;
     }
 }
-/* @media (max-width:600px){
-    .hideSidebar{
+@media (max-width:900px){
+    .skill-box{
+        display: block;
+        width: 100%;
+    
+    }
+    #skill-section{
+        width: 100%;
+    }
+    .navbar{
         display: none;
     }
-}  */
+    }
+    .menu-btn{
+        display: block;
+    }
+@media (max-width:768px){
+    #Projects-section{
+      place-items: center;
+      width:100% ;
+    }  
+    .project p{
+      font-size: 12px;
+   }
+    .btn{
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 60px;
+      width:100% ;
+      text-decoration: none;
+  }
+  .git{
+      width: 100%;
+  }
+  .github{
+      padding: 10px 50px;
+      font-size: 14px;
+      display: block;
+      width:100% ;
+      text-decoration: none;
+  }
+  }
+
+  @media (min-width:640px){
+    #Projects-section{
+      place-items: center;
+      width:100% ;
+    }  
+    .project p{
+        font-size: 12px;
+     }
+     .Need-me h1{
+        text-align: center;
+        padding: 10px;
+    } 
+    .Need-me button{
+        align-items: center;
+        justify-content: center;
+    }
+    .Need-me{
+        text-align: center;
+        width: 100%;
+    }
+    } 
+
  @media (max-width:475px){
+    .About-me p{
+        padding-right: 0px;
+        width: 100%;
+    }
+    #About-section{
+        flex-direction: column;
+    }
+    .About-me{
+        width:100% ;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .pic{
+        width:100% ;
+        margin: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    #navbar-container{
+        padding:  10px 20px;
+    }
     .sidebar{
         width:100%;
     }
     .menu-btn{
         display: block;
         float: inline-end;
-        margin-left: 220px;
     }
     .navbar{
         display: none;
     }
-.navbar.logo{
-    display: block;
-    display: flex;
-}
 .icons{
     display: inline-block;
     transition: .2s;
@@ -610,204 +750,51 @@ footer{
  .Hire{
     width: 100%;
  }
- /* .cv{
-    width: 100%;
- } */
-} 
-
-@media (max-width:768px){
-  #Projects-section{
+ #Projects-section{
     place-items: center;
-    width:100% ;
-  }  
-  .project p{
+    width:100%;
+    padding: 5px 30px;
+} 
+.project p{
     font-size: 12px;
- }
-  .btn{
+    width: 200px;
+ } 
+ .projects{
+    width:100%;
+    place-items: center;
+ } 
+.btn{
     margin-top: 20px;
     display: inline-block;
     padding: 10px 60px;
     width:100% ;
 }
+.github{
+    padding: 10px 40px;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+}
 .git{
     width: 100%;
 }
-.github{
-    padding: 10px 50px;
-    font-size: 14px;
-    display: block;
+.skill-box{
+    padding: 20px;
+  }  
+  .Need-me h1{
+    text-align: center;
     width:100% ;
+    font-size: x-large;
+    margin-top: 20px;
+} 
+.Need-me button{
+    align-items: center;
+    justify-content: center;
+}
+.Need-me{
+    text-align: center;
+    width: 100%;
 }
 }
-@media (max-width:950px){
-    #navbar-container{
-        padding: 11px 70px;
-        transition: .2s;
-    }
-    #About-section{
-        flex-direction: column;
-    }
-    .About-me{
-        width:100% ;
-        flex-wrap: wrap;
-        height: auto;
-    }
-    .pic{
-        width:100% ;
-        margin: auto;
-        height: auto;
-        flex-direction: column;
-    }
-}
-@media (max-width:475px){
-    .About-me p{
-        padding: none;
-        width: 100%;
-    }
-    #navbar-container{
-        padding: 11px 70px;
-        transition: .2s;
-    }
-    #About-section{
-        flex-direction: column;
-    }
-    .About-me{
-        width:100% ;
-        flex-wrap: wrap;
-        height: auto;
-    }
-    .pic{
-        width:100% ;
-        margin: auto;
-        height: auto;
-        flex-direction: column;
-    }
-}
-@media (min-width:475px){
-    #Projects-section{
-        place-items: center;
-        width:100%;
-        padding: 5px 30px;
-    } 
-    .project p{
-        font-size: 12px;
-        width: 200px;
-     } 
-     .projects{
-        width:100%;
-        place-items: center;
-     } 
-    .btn{
-        margin-top: 20px;
-        display: inline-block;
-        padding: 10px 60px;
-        width:100% ;
-    }
-    .github{
-        padding: 10px 40px;
-        font-size: 15px;
-        display: inline-block;
-        width: 100%;
-    }
-    .git{
-        width: 100%;
-    }
-  }
-  @media (max-width:900px){
-    .skill-box{
-        display: block;
-        width: 100%;
 
-    }
-    #skill-section{
-        width: 100%;
-    }
-  }
-  @media (max-width:475px){
-    .skill-box{
-      padding: 20px;
-    }  
-  }
-
-@media (min-width:640px){
-    #Projects-section{
-      place-items: center;
-      width:100% ;
-    }  
-    .project p{
-        font-size: 12px;
-     }
-  }
-@media (min-width:1024px){
-    #Projects-section{
-      padding: 70px;
-    }  
-    .btn{
-        margin-top: 20px;
-        display: inline-block;
-        padding: 10px 60px;
-    }
-    .github{
-         padding: 10px 40px; 
-        font-size: 15px;
-        display: inline-block;
-    } 
-  }
-  @media (max-width:1280px){
-    #Projects-section{
-      padding: 70px; 
-    }  
-    .projects{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        gap: 60px; 
-    } 
-    .github{
-       padding: 10px 50px;
-        font-size: 15px;
-        display: inline-block;
-    } 
-  }
-  @media (min-width:640px){
-    .Need-me h1{
-        text-align: center;
-        padding: 10px;
-    } 
-    .Need-me button{
-        align-items: center;
-        justify-content: center;
-    }
-    .Need-me{
-        text-align: center;
-        width: 100%;
-    }
-  }
-  @media (max-width:475px){
-    .Need-me h1{
-        text-align: center;
-        width:100% ;
-    } 
-    .Need-me button{
-        align-items: center;
-        justify-content: center;
-    }
-    .Need-me{
-        text-align: center;
-        width: 100%;
-    }
-  }
-  @media (max-width:1024px){
-    .Need-me h1{
-        text-align: center;
-        width:100% ;
-    } 
-    .Need-me button{
-        align-items: center;
-        justify-content: center;
-    }
-    .Need-me{
-        text-align: center;
-        width: 100%;
-    }
-  }
 
