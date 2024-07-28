@@ -195,17 +195,18 @@
 .socialmedia-icon p{
     margin-top: 40px;
 }
-.icons{
+#icons{
     color: #FFFFFF;
     margin-top: 30px;
 }
-.icons i{
+#icons i{
     margin: 10px;      
     font-size: large;
     color: #FFFFFF; 
  }
- .icons i:hover{
+ #icons i:hover{
     transform: translateY(-10px);
+    color: #f3ad1a;
  }
  #About-section{ 
     display: flex;
@@ -488,6 +489,7 @@
     border-radius: 5px;
     padding: 10px 60px;
     width:100% ;
+    text-decoration: none;
 }
 .github{
     padding: 10px 50px;
@@ -497,6 +499,7 @@
     border-radius: 5px;
     font-size: 15px;
     width:100% ;
+    text-decoration: none;
 }
 .btn:hover{
     letter-spacing: 1px;
@@ -610,7 +613,7 @@ footer{
         padding: 4% 70px;
         flex-direction: column-reverse;
     }
-    .icons{
+    #icons{
        display: block;
     }
     .bio-info{
@@ -735,7 +738,7 @@ footer{
     .navbar{
         display: none;
     }
-.icons{
+#icons{
     display: inline-block;
     transition: .2s;
     width:100% ;
